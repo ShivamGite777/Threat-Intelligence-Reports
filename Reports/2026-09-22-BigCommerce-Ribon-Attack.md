@@ -10,7 +10,7 @@
 
 ---
 
-## 1. What Happened?
+# 1. What Happened?
 
 On September 17, 2026, BigCommerce confirmed that credentials belonging to two third-party applications, **Ribon and Ribon 1.5**, had been compromised.
 
@@ -27,11 +27,11 @@ BigCommerce stated that its own core platform was **not breached**.
 
 ---
 
-## 2. How Did the Attackers Get In?
+# 2. How Did the Attackers Get In?
 
 The initial entry point was the compromise of credentials belonging to the third-party Ribon applications.
 
-## Attack Chain
+# Attack Chain
 
 ```text
 Third-Party Ribon Application
@@ -59,7 +59,7 @@ This is why the incident is classified primarily as a:
 
 ---
 
-## 3. Initial Access
+# 3. Initial Access
 
 # Initial Access Technique
 
@@ -81,7 +81,7 @@ The attacker can appear legitimate because the requests are being made using val
 
 ---
 
-## 4. What Data Was Accessed?
+# 4. What Data Was Accessed?
 
 According to reports about affected merchants, exposed shopper information included:
 
@@ -100,7 +100,7 @@ BigCommerce stated that:
 
 ---
 
-## 5. Malicious Script Injection
+# 5. Malicious Script Injection
 
 The attackers also injected malicious scripts into some affected merchant storefronts.
 
@@ -120,7 +120,7 @@ The important distinction is that the attackers also used their application acce
 
 ---
 
-## 6. Indicators of Compromise (IOCs)
+# 6. Indicators of Compromise (IOCs)
 
 No confirmed IP addresses, domains, malware hashes, or specific malicious JavaScript hashes were provided in the information available for this incident.
 
@@ -142,7 +142,7 @@ Therefore, the following should be treated as **behavioral indicators**, rather 
 | Application behavior       | Activity outside the application's normal purpose        |
 | Access timing              | Activity during the reported Sept. 13–17 incident window |
 
-## Important IOC Note
+### Important IOC Note
 
 For a real SOC investigation, **behavioral indicators alone are not enough**.
 
@@ -164,11 +164,11 @@ These would provide stronger, actionable IOCs.
 
 ---
 
-## 7. Detection Opportunities for SOC Analysts
+# 7. Detection Opportunities for SOC Analysts
 
 A SOC could investigate the incident by monitoring:
 
-# Authentication
+### Authentication
 
 ```text
 Unexpected application authentication
@@ -178,7 +178,7 @@ Unexpected geographic locations
 Abnormal credential usage
 ```
 
-# API Activity
+### API Activity
 
 ```text
 Large number of API requests
@@ -188,7 +188,7 @@ Unexpected API endpoints
 Abnormal request frequency
 ```
 
-# Web Application
+### Web Application
 
 ```text
 Unexpected JavaScript changes
@@ -198,7 +198,7 @@ Changes to checkout/storefront pages
 Suspicious script execution
 ```
 
-# Account/Application Behavior
+### Account/Application Behavior
 
 ```text
 Application accessing resources it normally does not access
@@ -209,7 +209,7 @@ Activity inconsistent with normal merchant activity
 
 ---
 
-## 8. Attack Classification
+# 8. Attack Classification
 
 | Category             | Classification                                        |
 | -------------------- | ----------------------------------------------------- |
@@ -225,17 +225,17 @@ Activity inconsistent with normal merchant activity
 
 ---
 
-## 9. Attack Timeline
+# 9. Attack Timeline
 
-# September 13, 2026
+### September 13, 2026
 
 Attackers began accessing shopper data in affected BigCommerce environments.
 
-# September 13–17, 2026
+### September 13–17, 2026
 
 Unauthorized activity occurred, including access to customer information and malicious script injection into some storefronts.
 
-# September 17, 2026
+### September 17, 2026
 
 BigCommerce confirmed the compromise of credentials associated with Ribon and Ribon 1.5.
 
@@ -243,7 +243,7 @@ BigCommerce removed the affected application from affected stores to revoke the 
 
 ---
 
-## 10. Response and Mitigation
+# 10. Response and Mitigation
 
 BigCommerce took several actions after identifying the incident:
 
@@ -266,19 +266,19 @@ For organizations using third-party applications, recommended defensive measures
 
 ---
 
-## 11. MITRE ATT&CK Mapping
+# 11. MITRE ATT&CK Mapping
 
 Possible MITRE ATT&CK mappings for the observed behavior include:
 
-# T1078 — Valid Accounts
+### T1078 — Valid Accounts
 
 Attackers used compromised legitimate credentials to access resources.
 
-# T1195 — Supply Chain Compromise
+### T1195 — Supply Chain Compromise
 
 The attacker compromised credentials associated with a trusted third-party application and used that trusted relationship to reach downstream environments.
 
-# T1059.007 — Command and Scripting Interpreter: JavaScript
+### T1059.007 — Command and Scripting Interpreter: JavaScript
 
 Relevant to malicious JavaScript execution/injection where applicable.
 
@@ -286,7 +286,7 @@ Relevant to malicious JavaScript execution/injection where applicable.
 
 ---
 
-## 12. SOC Analyst Investigation Flow
+# 12. SOC Analyst Investigation Flow
 
 If this incident appeared in a SOC environment, an analyst could investigate it like this:
 
@@ -318,31 +318,31 @@ Containment + Monitoring
 
 ---
 
-## 13. Key Lessons
+# 13. Key Lessons
 
-# 1. Third-Party Access Can Become an Attack Path
+## 1. Third-Party Access Can Become an Attack Path
 
 An organization can have strong security controls while still being exposed through a trusted third-party application.
 
-# 2. Valid Credentials Can Be Abused
+## 2. Valid Credentials Can Be Abused
 
 A request made with valid credentials does not automatically mean the activity is legitimate.
 
-# 3. Application Monitoring Is Important
+## 3. Application Monitoring Is Important
 
 SOC teams should monitor service accounts, API keys and application credentials just like user accounts.
 
-# 4. Monitor Code Changes
+## 4. Monitor Code Changes
 
 Unexpected JavaScript or storefront modifications can provide an important detection signal.
 
-# 5. Least Privilege Matters
+## 5. Least Privilege Matters
 
 Third-party applications should receive only the permissions they actually require.
 
 ---
 
-## 14. Final Assessment
+# 14. Final Assessment
 
 This incident demonstrates a **third-party supply-chain compromise involving stolen application credentials**.
 
