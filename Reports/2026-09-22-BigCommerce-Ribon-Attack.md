@@ -142,6 +142,12 @@ Therefore, the following should be treated as **behavioral indicators**, rather 
 | Application behavior       | Activity outside the application's normal purpose        |
 | Access timing              | Activity during the reported Sept. 13–17 incident window |
 
+
+### Primary target: Merchant storefronts using Ribon/Ribon 1.5
+### Data target: Customer names, emails, phone numbers, and shipping addresses
+### Secondary target: Storefronts for injecting malicious JavaScript
+
+
 ### Important IOC Note
 
 For a real SOC investigation, **behavioral indicators alone are not enough**.
