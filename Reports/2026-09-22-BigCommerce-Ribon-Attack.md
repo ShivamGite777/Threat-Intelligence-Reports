@@ -1,5 +1,5 @@
 
-### BigCommerce Ribon Third-Party Application Attack
+##### BigCommerce Ribon Third-Party Application Attack
 
 # **Date:** 22 September 2026
 # **Target:** BigCommerce merchants / online storefronts
