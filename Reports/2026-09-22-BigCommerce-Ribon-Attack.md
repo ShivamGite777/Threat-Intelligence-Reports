@@ -1,12 +1,12 @@
 
 ### BigCommerce Ribon Third-Party Application Attack
 
-**Date:** 22 September 2026
-**Target:** BigCommerce merchants / online storefronts
-**Threat Type:** Third-Party / Supply Chain Attack
-**Initial Access:** Compromised third-party application credentials
-**Primary Application:** Ribon / Ribon 1.5
-**Impact:** Unauthorized access to customer data and malicious script injection
+# **Date:** 22 September 2026
+# **Target:** BigCommerce merchants / online storefronts
+# **Threat Type:** Third-Party / Supply Chain Attack
+# **Initial Access:** Compromised third-party application credentials
+# **Primary Application:** Ribon / Ribon 1.5
+# **Impact:** Unauthorized access to customer data and malicious script injection
 
 ---
 
